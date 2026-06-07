@@ -1,0 +1,29 @@
+<article class="chapter-article home-article">
+  <h2>THE KIRA DOSSIER: AN ANALYTICAL OVERVIEW</h2>
+
+  <h3>Investigative Terminal – The Dark Interface of Truth</h3>
+  <p>Step into the <strong>Investigative Terminal</strong>, a digital crime‑scene where every line of code flickers like a candle in a rain‑splashed alley. The portal’s layout is forged in a <em>Gothic Noir</em> palette—deep charcoal shadows, stark ivory typefaces, and subtle whispers of crimson that echo the morally tangled world of Light Yagami and L. The UI feels like a handheld dossier, each click turning a weathered page that reveals hidden motives, forensic evidence, and layered schematics of the Shinigami’s notebook.</p>
+
+  <h3>The Duel of Minds: Light vs L</h3>
+  <p>At the heart of the archive lies the eternal rivalry that fuels the narrative. Light’s calculated brilliance meets L’s eccentric, method‑ical genius—two chess masters moving across a board of moral ambiguity. Our analysis breaks down their strategies:</p>
+  <ul>
+    <li><strong>Light’s Algorithmic Ascendancy</strong>: A cascade of logical deductions, each entry in the terminal mirrors his escalating confidence.</li>
+    <li><strong>L’s Unorthodox Intuition</strong>: Bespoke visualizations, asymmetrical grids, and unpredictable traces that keep the visitor on edge.</li>
+  </ul>
+  <p>This contrast is visualized through alternating dark‑light themes, mirroring the characters’ psychological chess match and ensuring that every scroll feels like a step deeper into a thriller script.</p>
+
+  <h3>Technical Superiority – Speed, Clarity, & Efficiency</h3>
+  <p>The <strong>archive’s technical backbone</strong> is as lethal as the notebook itself. Every image is served in <strong>AVIF</strong> and <strong>WebP</strong> formats, delivering crystal‑clear panels at a fraction of the load size. The portal’s <strong>Largest Contentful Paint (LCP)</strong> consistently lands under <strong>one second</strong>, thanks to:</p>
+  <ul>
+    <li>Critical CSS inlined for instant paint.</li>
+    <li>Lazy‑loaded manga spreads that pre‑decode in the background.</li>
+    <li>HTTP/2 multiplexing that streams data faster than a detective’s intuition.</li>
+  </ul>
+  <p>These optimizations guarantee that the visitor’s experience stays immersive—no lag, no broken tension—only the relentless rhythm of a high‑stakes investigation.</p>
+
+  <h3>Gothic Noir Design – A Visual Narrative</h3>
+  <p>The portal’s design is engineered to feel like a film noir set in a cyber‑punk Tokyo. Heavy‑weight typography, deep‑shadow gradients, and subtle grain textures conjure a sense of foreboding. Interactive elements, such as hovering over a clue, trigger a soft, smoky vignette that fades in and out like the fleeting glimpse of a suspect in a rain‑soaked alley.</p>
+
+  <h3>Conclusion – The Archive as a Weapon</h3>
+  <p>In a world where information is power, this <strong>Gothic Noir Investigative Terminal</strong> becomes both weapon and witness. It showcases the rivalry of Light and L with cinematic flair while delivering sub‑second performance through state‑of‑the‑art image formats and meticulous front‑end engineering. The result is a living dossier—dark, elegant, and technically unstoppable.</p>
+</article>

@@ -1,0 +1,46 @@
+{
+  "project_variables": {
+    "manga_name": "Death Note",
+    "website_name": "Death Note Online",
+    "domain": "https://deathnote-manga.online/",
+    "google_tag_id": "G-32THHV9JQF",
+    "chapter_count": 108
+  },
+  "visual_identity": {
+    "primary_color": "#ffffff",
+    "secondary_color": "#ff0000",
+    "accent_color": "#333333",
+    "dark_bg": "#050505",
+    "font_heading": "'Old Standard TT', serif",
+    "font_body": "'Inter', sans-serif",
+    "ui_style": "Gothic Noir / Investigative Terminal"
+  },
+  "antigravity_skill_orchestration": {
+    "active_skills": [
+      "antigravity-design-expert",
+      "tailwind-patterns",
+      "seo-programmatic",
+      "performance-optimizer",
+      "ai-seo"
+    ],
+    "directives": "Utilize 'antigravity-design-expert' to create a high-contrast 'L vs Kira' theme. Use 'tailwind-patterns' for ultra-sharp typography and 'performance-optimizer' to ensure sub-second LCP (Largest Contentful Paint)."
+  },
+  "generation_prompts": {
+    "landing_page_ui": "Design a 'Notebook' inspired UI. 1. HERO: A cinematic split-screen effect. Left: Ryuk in shadows; Right: Light Yagami in a cold spotlight. The title 'DEATH NOTE ONLINE' should appear in a hand-written gothic font with a subtle 'ink bleed' animation. 2. CHAPTER GRID: Design cards that look like 'Case Files'. Use a vertical 3-column layout. Each card features a textured paper background, a red 'Top Secret' stamp, and the chapter title in typewriter font. 3. NAV: A minimalist top bar with 'L' and 'Kira' symbols as toggle buttons for site-wide color shifts (Cold Blue vs Blood Red).",
+    "seo_geo_strategy": "Activate 'seo-geo' and 'ai-seo' skills to target Global markets. Generate meta-tags and localized structured data for 'Read Death Note Manga Online'. Use the 'schema-markup' skill to inject 'ComicSeries' JSON-LD to dominate Google rich snippets for 'Death Note All Chapters'.",
+    "technical_files": "Generate robots.txt, a dynamic sitemap.xml for 108 chapters, and a .htaccess file for high-security headers. Use 'seo-sitemap' to prioritize the 'Latest Chapter' and 'Manga List' URLs."
+  },
+  "technical_architectures": {
+    "image_workflow": "Convert all chapter scans to AVIF via 'python-performance-optimization'. Implement 'Lazy-Loading' using 'Intersection Observer' so the 'Case File' images only load when scrolled into view.",
+    "tag_integration": "Inject G-32THHV9JQF tracking via a global head-inject script. Ensure it tracks 'Chapter Read' events to analyze user engagement across all 108 chapters."
+  },
+  "design_aesthetics": {
+    "feel": "Intense, Cold, Intellectual, Gothic",
+    "interactive_elements": [
+      "Ink-Bleed Hover: Hovering over links causes a red 'ink' spread effect.",
+      "Investigation Progress: A top-of-page progress bar styled as an 'Evidence Timeline'.",
+      "Shinigami Flicker: Occasional 0.1s glitch flicker of Ryuk's silhouette in the background.",
+      "Typewriter Loading: Chapter cards reveal text with a mechanical typewriter sound and animation."
+    ]
+  }
+}

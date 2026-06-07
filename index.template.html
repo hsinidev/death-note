@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Note Online | Gothic Noir Manga Portal</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- SEO & Performance -->
+    <!-- SEO & GEO Meta Tags -->
+    <meta name="description" content="Death Note Online: The High-Performance Gothic Noir Manga Portal. Experience the battle between Kira and L with sub-second LCP optimized chapters.">
+    <meta name="keywords" content="Death Note, Read Death Note Online, Death Note Manga, Kira, L Lawliet, Ryuk, Shinigami, Gothic Noir Manga">
+    <link rel="canonical" href="https://deathnote-online.com/index.html">
+    
+    <!-- GEO Tags -->
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York">
+    <meta name="geo.position" content="40.7128;-74.0060">
+    <meta name="ICBM" content="40.7128, -74.0060">
+
+    <!-- OpenGraph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Death Note Online | Gothic Noir Manga Portal">
+    <meta property="og:description" content="Sub-second LCP optimized Death Note archive. Cinematic investigative experience.">
+    <meta property="og:image" content="https://deathnote-online.com/background.png">
+    
+    <!-- JSON-LD Schema Placeholder -->
+    <script type="application/ld+json" id="schema-main">
+        {SCHEMA_JSON}
+    </script>
+    
+    <!-- Optimized for Performance and Privacy -->
+</head>
+<body class="l-mode"> <!-- Default to investigative mode -->
+    <div class="timeline-bar" id="progressBar"></div>
+    <div class="bg-shinigami"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <span>D</span><span>E</span><span>A</span><span>T</span><span>H</span> 
+                <span>N</span><span>O</span><span>T</span><span>E</span>
+            </a>
+            
+            <div class="header-tools">
+                <div class="dropdown-container">
+                    <button class="dropdown-trigger">CHAPTER SELECT</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-search">
+                            <input type="text" id="chapterSelectSearch" placeholder="Filter Chapters...">
+                        </div>
+                        <div id="dropdownLinksContainer">
+                            <!-- DROPDOWN_LINKS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mode-toggles">
+                    <div class="toggle-btn toggle-l active" id="lToggle" title="Investigative Mode (L)">L</div>
+                    <div class="toggle-btn toggle-kira" id="kiraToggle" title="Kira Mode">K</div>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" id="chapterSearch" placeholder="SEARCH CASE FILES..." aria-label="Search Case Files">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-side l-side"></div>
+        <div class="hero-side misa-ryuk-side"></div>
+        <div class="hero-content">
+            <h1>DEATH NOTE</h1>
+            <p class="hero-subtitle">INVESTIGATIVE DOSSIER // TOP SECRET</p>
+        </div>
+    </section>
+
+    <div class="case-controls">
+        <span class="controls-label">ORDER BY:</span>
+        <button class="sort-btn active" id="sortLast">LAST (112-1)</button>
+        <button class="sort-btn" id="sortFirst">FIRST (1-112)</button>
+    </div>
+
+    <main class="case-grid" id="caseGrid">
+        <!-- CHAPTER_CARDS -->
+    </main>
+
+    <div class="home-article-container">
+        {HOME_ARTICLE}
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="dmca.html">DMCA</a>
+            <a href="terms.html">Terms</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p>&copy; 2026 DEATH NOTE ONLINE. ALL RIGHTS RESERVED. JUSTICE WILL BE SERVED.</p>
+        <p class="footer-performance-note">OPTIMIZED WITH WEBP & SUB-SECOND LCP ARCHITECTURE</p>
+    </footer>
+
+    <script>
+        // Mode Toggle Logic
+        const body = document.body;
+        const lToggle = document.getElementById('lToggle');
+        const kiraToggle = document.getElementById('kiraToggle');
+
+        lToggle.addEventListener('click', () => {
+            body.className = 'l-mode';
+            lToggle.classList.add('active');
+            kiraToggle.classList.remove('active');
+        });
+
+        kiraToggle.addEventListener('click', () => {
+            body.className = 'kira-mode';
+            kiraToggle.classList.add('active');
+            lToggle.classList.remove('active');
+        });
+
+        // Scroll Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+
+        // Dropdown Search Logic
+        const dropdownSearch = document.getElementById('chapterSelectSearch');
+        const dropdownContainer = document.getElementById('dropdownLinksContainer');
+        const dropdownLinks = dropdownContainer.getElementsByTagName('a');
+
+        dropdownSearch.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            for (let link of dropdownLinks) {
+                if (link.textContent.toLowerCase().includes(term)) {
+                    link.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                }
+            }
+        });
+
+        // Search Functionality (Grid)
+        const searchInput = document.getElementById('chapterSearch');
+        const caseGrid = document.getElementById('caseGrid');
+        const caseFiles = Array.from(caseGrid.getElementsByClassName('case-file'));
+
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            caseFiles.forEach(file => {
+                const title = file.querySelector('.case-title').textContent.toLowerCase();
+                const num = file.querySelector('.case-number').textContent.toLowerCase();
+                if (title.includes(term) || num.includes(term)) {
+                    file.style.display = 'flex';
+                } else {
+                    file.style.display = 'none';
+                }
+            });
+        });
+
+        // Sorting Logic
+        const sortFirstBtn = document.getElementById('sortFirst');
+        const sortLastBtn = document.getElementById('sortLast');
+
+        function sortChapters(ascending) {
+            const sortedFiles = caseFiles.sort((a, b) => {
+                const numA = parseInt(a.querySelector('.case-number').textContent.replace(/\D/g, '')) || 0;
+                const numB = parseInt(b.querySelector('.case-number').textContent.replace(/\D/g, '')) || 0;
+                return ascending ? numA - numB : numB - numA;
+            });
+            
+            caseGrid.innerHTML = '';
+            sortedFiles.forEach(file => caseGrid.appendChild(file));
+        }
+
+        sortFirstBtn.addEventListener('click', () => {
+            sortChapters(true);
+            sortFirstBtn.classList.add('active');
+            sortLastBtn.classList.remove('active');
+        });
+
+        sortLastBtn.addEventListener('click', () => {
+            sortChapters(false);
+            sortLastBtn.classList.add('active');
+            sortFirstBtn.classList.remove('active');
+        });
+
+        // Intersection Observer for Lazy Loading 
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
+// ... existing observer code (re-injecting it)
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("opacity-0");
+                            lazyImage.classList.add("opacity-100");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Death Note - {chapter_title} Online | Gothic Noir Manga Portal</title>
+    <link rel="stylesheet" href="../../../index.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+    
+    <!-- SEO & GEO Meta Tags -->
+    <meta name="description" content="Read Death Note {chapter_title} online. High-performance reader with Gothic Noir atmospheric effects. Optimized for mobile and desktop.">
+    <meta name="keywords" content="Death Note {chapter_title}, Read Death Note, Death Note Manga Online, {chapter_title} Manga">
+    
+    <!-- GEO Tags -->
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York">
+
+    <!-- JSON-LD Schema Placeholder -->
+    <script type="application/ld+json">
+        {SCHEMA_JSON}
+    </script>
+    <style>
+        body {{
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }}
+        .reader-container {{
+            width: 100%;
+            max-width: 100%;
+            margin: 80px 0 100px 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+            z-index: 10;
+        }}
+        .reader-img {{
+            width: 100%;
+            height: auto;
+            border: none;
+            box-shadow: none;
+            display: block;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }}
+        .reader-img.loaded {{
+            opacity: 1;
+        }}
+        .reader-nav {{
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 20px;
+            background: rgba(0,0,0,0.8);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }}
+        .nav-btn {{
+            font-family: var(--font-typewriter);
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: var(--transition);
+        }}
+        .nav-btn:hover {{
+            color: var(--accent-color);
+        }}
+        .chapter-info {{
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 900;
+            font-family: var(--font-typewriter);
+            color: rgba(255,255,255,0.4);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 15px;
+            border-radius: 2px;
+        }}
+        .timeline-bar {{
+            transition: width 0.1s linear, background-color 0.4s ease;
+        }}
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {{
+            .reader-container {{
+                max-width: 100%;
+                margin: 60px 0 80px 0;
+            }}
+            .reader-nav {{
+                width: 90%;
+                max-width: 400px;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 1rem;
+                bottom: 15px;
+                border-radius: 8px;
+            }}
+            .nav-btn {{
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+            }}
+            .chapter-info {{
+                display: none;
+            }}
+            .chapter-article {{
+                padding: 30px 20px;
+            }}
+            header nav {{
+                padding: 0.5rem 1rem;
+            }}
+        }}
+    </style>
+</head>
+<body class="kira-mode"> <!-- Default to Kira mode for intensity -->
+    <div class="bg-shinigami"></div>
+    <div class="timeline-bar" id="progressBar"></div>
+
+    <header>
+        <nav>
+            <a href="../../../index.html" class="logo">
+                <span>D</span><span>E</span><span>A</span><span>T</span><span>H</span> 
+                <span>N</span><span>O</span><span>T</span><span>E</span>
+            </a>
+            
+            <div class="header-tools">
+                <div class="dropdown-container">
+                    <button class="dropdown-trigger">CHAPTER SELECT</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-search">
+                            <input type="text" id="chapterSelectSearch" placeholder="Filter Chapters...">
+                        </div>
+                        <div id="dropdownLinksContainer">
+                            {DROPDOWN_LINKS}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mode-toggles">
+                    <div class="toggle-btn toggle-l" id="lToggle" title="Investigative Mode (L)">L</div>
+                    <div class="toggle-btn toggle-kira" id="kiraToggle" title="Kira Mode">K</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="chapter-info">{chapter_title}</div>
+
+    <main class="reader-container">
+        {reader_content}
+        
+        <article class="chapter-article">
+            {chapter_article}
+        </article>
+    </main>
+
+    <nav class="reader-nav">
+        {first_link}
+        {prev_link}
+        <a href="../../../index.html" class="nav-btn">Directory</a>
+        {next_link}
+        {last_link}
+    </nav>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="../../../about.html">About</a>
+            <a href="../../../contact.html">Contact</a>
+            <a href="../../../privacy-policy.html">Privacy Policy</a>
+            <a href="../../../dmca.html">DMCA</a>
+            <a href="../../../terms.html">Terms</a>
+            <a href="../../../cookies.html">Cookies</a>
+            <a href="../../../disclaimer.html">Disclaimer</a>
+        </div>
+        <p>&copy; 2026 DEATH NOTE ONLINE. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        // Mode Toggling
+        const body = document.body;
+        const lToggle = document.getElementById('lToggle');
+        const kiraToggle = document.getElementById('kiraToggle');
+
+        lToggle.addEventListener('click', () => {{
+            body.classList.remove('kira-mode');
+            body.classList.add('l-mode');
+            lToggle.classList.add('active');
+            kiraToggle.classList.remove('active');
+        }});
+
+        kiraToggle.addEventListener('click', () => {{
+            body.classList.remove('l-mode');
+            body.classList.add('kira-mode');
+            kiraToggle.classList.add('active');
+            lToggle.classList.remove('active');
+        }});
+
+        // Dropdown Search Logic
+        const dropdownSearch = document.getElementById('chapterSelectSearch');
+        const dropdownContainer = document.getElementById('dropdownLinksContainer');
+        const dropdownLinks = dropdownContainer.getElementsByTagName('a');
+
+        dropdownSearch.addEventListener('input', (e) => {{
+            const term = e.target.value.toLowerCase();
+            for (let link of dropdownLinks) {{
+                if (link.textContent.toLowerCase().includes(term)) {{
+                    link.style.display = 'block';
+                }} else {{
+                    link.style.display = 'none';
+                }}
+            }}
+        }});
+
+        // Scroll Progress
+        window.onscroll = function() {{
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }};
+
+        // Lazy Loading with Fade-in
+        const observerOptions = {{
+            root: null,
+            rootMargin: '200px',
+            threshold: 0.1
+        }};
+
+        const observer = new IntersectionObserver((entries) => {{
+            entries.forEach(entry => {{
+                if (entry.isIntersecting) {{
+                    const img = entry.target;
+                    if (img && img.dataset.src) {{
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        img.onload = () => img.classList.add('loaded');
+                    }}
+                    observer.unobserve(entry.target);
+                }}
+            }});
+        }}, observerOptions);
+
+        document.querySelectorAll('img.reader-img').forEach(img => observer.observe(img));
+    </script>
+</body>
+</html>
